@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenica Fotográfica - Capturamos Tus Momentos Especiales</title>
+    <meta name="Descripción" content="Página web profesional de agencia fotográfica modric estudio. Especializada en eventos, retratos, graduaciones, ademas de Servicios personalizados para familias y empresas.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Animaciones personalizadas para efectos únicos */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in { animation: fadeIn 1s ease-out; }
+
+        /* Estilo para imágenes con fallback */
+        img {
+            transition: transform 0.3s ease;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+        /* Fallback para imágenes no cargadas */
+        img[onerror] { background-color: #f0f0f0; padding: 20px; text-align: center; }
+
+        /* Estilo del menú móvil */
+        .menu-hidden { display: none; }
+        .menu-visible { display: block; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+    <!-- Header con Navegación -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600">Modric Estudio</div>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#inicio" class="hover:text-blue-600 transition">Inicio</a></li>
+                <li><a href="#acerca" class="hover:text-blue-600 transition">Acerca de</a></li>
+                <li><a href="#servicios" class="hover:text-blue-600 transition">Servicios</a></li>
+                <li><a href="#portafolio" class="hover:text-blue-600 transition">Portafolio</a></li>
+                <li><a href="#contacto" class="hover:text-blue-600 transition">Contacto</a></li>
+            </ul>
+            <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">☰</button>
+        </nav>
+        <!-- Menú móvil -->
+        <ul id="mobile-menu" class="md:hidden bg-white border-t shadow-lg menu-hidden">
+            <li><a href="#inicio" class="block px-4 py-2 hover:bg-gray-100">Inicio</a></li>
+            <li><a href="#acerca" class="block px-4 py-2 hover:bg-gray-100">Acerca de</a></li>
+            <li><a href="#servicios" class="block px-4 py-2 hover:bg-gray-100">Servicios</a></li>
+            <li><a href="#portafolio" class="block px-4 py-2 hover:bg-gray-100">Portafolio</a></li>
+            <li><a href="#contacto" class="block px-4 py-2 hover:bg-gray-100">Contacto</a></li>
+        </ul>
+    </header>
+
+    <!-- Sección Hero -->
+    <section id="inicio" class="relative h-screen bg-gradient-to-r from-blue-500 to-teal-500 text-white flex items-center">
+        <div class="container mx-auto px-4 text-center fade-in">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ec0a6e6a-bebd-4e3a-b8d5-47fc1dd1cf84.png" alt="Fotografía profesional de paisaje urbano al atardecer con cámara de alta calidad capturando momentos de una agencia local, en tonos azules y naranjas para evocar emoción y profesionalismo" class="w-full h-full object-cover absolute inset-0 -z-10" onerror="this.style.display='none'; this.parentElement.style.backgroundImage='linear-gradient(to right, #3b82f6, #14b8a6)'; this.parentElement.style.backgroundSize='cover';">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">Capturamos Tus Momentos Inolvidables</h1>
+            <p class="text-xl mb-8">Agencia fotográfica especializada en eventos, retratos, graduaciones, ademas de Servicios personalizados para familias y empresas.</p>
+            <a href="#contacto" class="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition">Solicitar Cotización</a>
+        </div>
+    </section>
+
+    <!-- Acerca de -->
+    <section id="acerca" class="py-20 bg-white">
+        <div class="container mx-auto px-4 fade-in">
+            <h2 class="text-4xl font-bold text-center mb-12">Acerca de Nuestra Agencia</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3b21d424-971f-41d3-ad30-0e6567681482.png" alt="Retrato profesional del equipo de la agencia fotográfica local trabajando en una sesión de fotos al aire libre, con cámaras profesionales y expresiones entusiastas, en estilo documental con iluminación natural" class="w-full md:w-1/2 h-auto rounded-lg mb-8 md:mb-0 mr-0 md:mr-8" onerror="this.style.backgroundColor='#e5e7eb'; this.alt='Imagen no disponible'">
+                <div class="md:w-1/2">
+                    <p class="text-lg mb-4">Somos una agencia fotográfica local comprometida con capturar la esencia de tus momentos especiales. Con # años de experiencia, servimos a familias y empresas en la region. Nuestro enfoque personalizado asegura que cada fotografia cuente una historia única.</p>
+                    <p class="text-lg">Utilizamos equipos de vanguardia y técnicas profesionales para ofrecer resultados que superan expectativas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4 fade-in">
+            <h2 class="text-4xl font-bold text-center mb-12">Nuestros Servicios</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0cdce3e7-6c58-40cc-8002-c3849c36c62f.png" alt="Fotografía de boda al aire libre con pareja sosteniendo flores, fondo de jardín verde con arco florista y iluminación dorada para un toque romántico y profesional" class="w-full h-48 object-cover rounded-t-lg mb-4" onerror="this.style.backgroundColor='#f9fafb';">
+                    <h3 class="text-2xl font-semibold mb-4">Fotografía de Bodas</h3>
+                    <p>Maestra en capturar el amor y la alegría de tu gran día con estilo artístico y natural.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/04bf88f5-87f0-42da-95ce-69b42c348892.png" alt="Sesión de fotos de evento corporativo con grupo de personas aplaudiendo en sala de conferencias moderna, con luces de escenario y composición profesional para eventos locales" class="w-full h-48 object-cover rounded-t-lg mb-4" onerror="this.style.backgroundColor='#f9fafb';">
+                    <h3 class="text-2xl font-semibold mb-4">Fotografía de Eventos</h3>
+                    <p>Registra momentos inolvidables en fiestas, cumpleaños y reuniones profesionales.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d39b0a64-b22c-427f-9507-8339cf1bf480.png" alt="Retrato estudiantil de persona sonriendo en estudio con fondo neutro, iluminación suave y expresión confiada para fotos profesionales locales" class="w-full h-48 object-cover rounded-t-lg mb-4" onerror="this.style.backgroundColor='#f9fafb';">
+                    <h3 class="text-2xl font-semibold mb-4">Retratos y Perfiles</h3>
+                    <p>Imágenes personales para currículums, redes sociales y proyectos creativos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portafolio con Carrusel Simple -->
+    <section id="portafolio" class="py-20 bg-white">
+        <div class="container mx-auto px-4 fade-in">
+            <h2 class="text-4xl font-bold text-center mb-12">Nuestro Portafolio</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e6264c34-aecf-4f5f-bf04-047eedc6fede.png" alt="Fotografía de portafolio de retrato familiar con padres e hijos riendo en parque local, iluminación natural y composición cálida para agencia fotográfica profesional" class="w-full h-64 object-cover rounded-lg cursor-pointer" onclick="openModal(this.src)" onerror="this.style.backgroundColor='#e5e7eb';">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/aadad73f-c344-4920-84a0-6dc6edb4b530.png" alt="Imagen de boda en jardín con ramo de flores y vestidos elegantes, estilo romántico con tonos pasteles para capturar emociones en agencia local" class="w-full h-64 object-cover rounded-lg cursor-pointer" onclick="openModal(this.src)" onerror="this.style.backgroundColor='#e5e7eb';">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7b2152a2-9e86-4b7b-a960-25bde943e0a5.png" alt="Fotografía de evento empresarial con personas interactuando en salón moderno, composición dinámica y profesional para servicios locales" class="w-full h-64 object-cover rounded-lg cursor-pointer" onclick="openModal(this.src)" onerror="this.style.backgroundColor='#e5e7eb';">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/58210599-af7f-4559-9df4-62abc39c9781.png" alt="Retrato artístico de artista con pinceles y lienzo en estudio, iluminación dramática para enfoque creativo en fotografia local" class="w-full h-64 object-cover rounded-lg cursor-pointer" onclick="openModal(this.src)" onerror="this.style.backgroundColor='#e5e7eb';">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e65cf5d1-33ca-45d1-bc1a-10e90bab1adc.png" alt="Sesión de naturaleza con paisaje montañoso y río cristalino, composición amplia para deporte o aventura en agencia fotográfica" class="w-full h-64 object-cover rounded-lg cursor-pointer" onclick="openModal(this.src)" onerror="this.style.backgroundColor='#e5e7eb';">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d2df91f0-56c2-4c4c-b731-19b0a921795c.png" alt="Fotografia de productos en mesa con alimentos frescos y composición atractiva para marketing local" class="w-full h-64 object-cover rounded-lg cursor-pointer" onclick="openModal(this.src)" onerror="this.style.backgroundColor='#e5e7eb';">
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para imágenes del portafolio -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <img id="modal-img" src="" alt="Imagen ampliada del portafolio" class="max-w-full max-h-full" src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ea80628a-e25a-4c17-90c0-d342b51fb28a.png">
+        <button onclick="closeModal()" class="absolute top-4 right-4 text-white text-2xl">&times;</button>
+    </div>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-20 bg-blue-600 text-white">
+        <div class="container mx-auto px-4 fade-in">
+            <h2 class="text-4xl font-bold text-center mb-12">Contáctanos</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <form id="contact-form" class="md:w-1/2 bg-white text-gray-900 p-8 rounded-lg shadow-lg mb-8 md:mb-0 mr-0 md:mr-8">
+                    <div class="mb-4">
+                        <label for="name" class="block font-semibold mb-2">Nombre</label>
+                        <input type="text" id="name" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block font-semibold mb-2">Correo Electrónico</label>
+                        <input type="email" id="email" class="w-full p-3 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block font-semibold mb-2">Mensaje</label>
+                        <textarea id="message" rows="5" class="w-full p-3 border border-gray-300 rounded-lg" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white p-3 rounded-lg font-semibold hover:bg-blue-700 transition">Enviar Mensaje</button>
+                </form>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-4">Información</h3>
+                    <p class="mb-2">Dirección: Calle Principal 123, Ciudad Local</p>
+                    <p class="mb-2">Teléfono: +507 456 789</p>
+                    <p class="mb-4">Email: info@modricestudio.com</p>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5a24de13-356d-487e-847d-8d1766007fe6.png" alt="Mapa simplificado de ubicación de la agencia fotográfica local en centro ciudad con marcadores y rutas accesibles para clientes potenciales" class="w-full h-auto rounded-lg" onerror="this.style.backgroundColor='#e5e7eb';">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2025 Modric Estudio. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript para Interactividad -->
+    <script>
+        // Menú móvil toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('menu-hidden');
+            menu.classList.toggle('menu-visible');
+        });
+
+        // Smooth scroll a secciones
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Modal para portafolio
+        function openModal(src) {
+            document.getElementById('modal-img').src = src;
+            document.getElementById('modal').classList.remove('hidden');
+        }
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+        }
+
+        // Validación simple del formulario
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            if (name && email && message) {
+                alert('¡Mensaje enviado! Nos contactaremos pronto.');
+                this.reset();
+            } else {
+                alert('Por favor, completa todos los campos.');
+            }
+        });
+    </script>
+
+</body>
+</html>
+
+
